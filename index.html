@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Home
+        </title>
+        <style>
+body {font-family: "Lato", sans-serif; 
+padding: 0px;
+margin: 0px;
+}
+.menudiv{
+  background-color: black;
+  /* display: flexbox; */
+  font-size: 15px;
+  /* padding: 17px; */
+  width: 100%;
+  
+}
+a{
+  text-decoration: none; 
+  color: white;
+  /* margin-right: 10px; */
+  padding: 17px;
+  /* height: 38px; */
+  display: inline-block;
+}
+a:hover{
+  background-color: silver;
+}
+.thebanddiv{
+  width: 100%;
+  margin: auto;
+}
+.tourdiv{
+  background-color: black;
+  /* display: flex; */
+  /* justify-content: center; */
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20%;
+  padding-right: 20%;
+  
+}
+.soldout{
+  background-color: red;
+  padding: 3px;
+
+}
+.itemcount{
+  background-color: black;
+  padding-left: 8px;
+  padding-right: 8px;
+  /* height: 34px; */
+  border-radius: 17px;
+
+}
+.monthlist{
+  background-color: white;
+  border: 1px solid white;
+  width: 100%;
+  font-size: 13px;
+}
+.monthlist p{
+  color: #333;
+  padding-left: 10px;
+  
+}
+.monthlist span{
+  color: white;
+  /* padding-left: 10px; */
+}
+.event{
+  background-color: white;
+  color: #333;
+
+}
+.event div{
+  padding: 10px;
+  font-size: 14px;
+  /* color: black; */
+}
+.eventtable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 14px;
+}
+input[type=button] {
+  padding: 10px;
+  color: white;
+  background-color: black;
+  border: none;
+}
+.formtable {
+  margin-right: auto;
+  margin-left: auto;
+  border-collapse: separate;
+  border-spacing: 70px;
+
+}
+#message:focus{
+  outline: none;
+}
+
+        </style>
+    </head>
+    <body>
+<div class="menudiv">
+    <a href="#">HOME</a>
+    <a href="#band">BAND</a>
+    <a href="#tour">TOUR</a>
+    <a href="#contact">CONTACT</a>
+    <a href="#more">MORE</a>
+</div>
+<div class="firstimage">
+    <img id="slider" src="chicago image.jpg" width="100%"> 
+    <!-- <div class="firstimagetext">
+        <h3>Chicago</h3><br>
+        <p>Thank you, Chicago - A night we won't forget.</p>
+    </div> -->
+</div>
+<div>
+  <input type="button" value="Previous" onclick="onprevious()">
+  <input type="button" value="Next" onclick="onnext()">
+</div>
+
+
+<div class="thebanddiv" style="max-width:800px" id="band">
+    <h2 class="theband" style="text-align: center;">THE BAND</h2>
+    <p class="welovemusic" style="text-align: center;"><i>We love music</i></p>
+    <p class="longp">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+    <div class="nameimage" style="text-align: center;">
+        <table class="bandtableclass">
+            <tr class="bandname" >
+        <td>Name</td>
+        <td>Name</td>
+        <td>Name</td>
+    </tr>
+    <tr class="bandimg">
+        <td> <img src="bandmemberimg.jpg" style="width: 60%;" ></td>
+        <td><img src="bandmemberimg.jpg" style="width: 60%;"></td>
+        <td><img src="bandmemberimg.jpg" style="width: 60%;"></td>
+    </tr>
+    </table>
+    </div>
+    </div>
+    
+
+    <div class="tourdiv" id="tour" style="color: white;">
+        <h2 style="text-align: center;" >TOUR DATES</h2>
+        <p style="text-align: center;" ><i>Remember to book your tickets!</i></p><br>
+          <div class="monthlist">
+          <!-- <ul style="list-style-type: none; background-color: white;  color:teal;" class="monthlist">
+            <li style="border: 1px solid teal;" class="september">September <span style="background-color: red;" class="spansoldout">Sold out</span></li>
+            <li style="border: 1px solid teal;" class="october">October <span style="background-color: red;" class="spansoldout">Sold out</span></li>
+            <li style="border: 1px solid teal;" class="november">November <span style="background-color:blue; " class="span3" >3</span></li>
+          </ul> -->
+          <p>September <span class="soldout">Sold out</span></p>
+          <hr>
+          <p>October <span class="soldout">Sold out</span></p>
+          <hr>
+          <p style="display: flex; justify-content: space-between;">November <span id="nov_soldout" class="soldout">Sold out</span> <span id="itemcount" class="itemcount">3</span></p>
+    </div>
+
+              <table class="eventtable">
+                  <tr>
+                    <td>
+                      <div class="event">
+                        <img src="newyork image.jpg" style="width: 100%;">
+                        <div>
+                          <p style="color: black; font-size: 15px;"><b>New York</b></p>
+                        <p>Fri 27 Nov 2016</p>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <input type="button" value="Buy Tickets">
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="event">
+                        <img src="paris image.jpg" style="width: 100%;">
+                        <div>
+                          <p style="color: black; font-size: 15px;"><b>Paris</b></p>
+                        <p>Sat 28 Nov 2016</p>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <input type="button" value="Buy Tickets">
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="event">
+                        <img src="sanfran image.jpg" style="width: 100%;">
+                        <div>
+                          <p style="color: black; font-size: 15px;"><b>San Francisco</b></p>
+                        <p>Sun 29 Nov 2016</p>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <input onclick="count()" type="button" value="Buy Tickets">
+                        </div>
+                      </div>
+                    </td>
+                </tr>
+              </table>
+    </div>
+    
+
+    <div class="contactdiv" style="max-width:100%; border: 1px solid red;" id="contact">
+      <h2 style="text-align: center;">CONTACT</h2>
+      <p style="text-align: center; color: #333;"><i>Fan? Drop a note!</i></p>
+        <table class="formtable">
+          <tr>
+          <td>
+          <div>
+            <i></i> Chicago, US<br>
+            <i></i> Phone: +00 151515<br>
+            <i> </i> Email: mail@mail.com<br>
+          </div>
+        </td>
+        <td>
+          <div>
+            <form action="/action_page.php" target="_blank">
+              <!-- <div style="margin:0 -16px 8px -16px"> -->
+                <div>
+                  <input style="font-size: 14px;" type="text" placeholder="Name" required name="Name">
+                  <input  style="font-size: 14px;"  type="text" placeholder="Email" required name="Email">
+                </div><br>
+                <!-- <div style="border: 1px solid blue;"></div>
+                  <input type="text" placeholder="Email" required name="Email">
+                </div> -->
+                <div>
+              <textarea id="message" oninput="onwrite(this.value)" style="font-size: 14px; border-color: gray;" type="text" placeholder="Message" required name="Message"></textarea>
+              </div>
+              <p id="textcount">0/40</p>
+              <div>
+                <button type="submit">SEND</button>
+              </div>
+            </form>
+          </div>
+      </td>
+      </tr>
+      </table>
+        <div>
+          <img src="map image.jpg" style="width: 100%; padding-top: 40px;">
+        </div>
+      </div>
+    
+    <script>
+      let itemcount=3;
+      // alert("Hello")s
+      document.getElementById("nov_soldout").style.display="none";
+
+      function count() {
+        // alert("clicked")
+       itemcount=itemcount-1 
+        document.getElementById("itemcount").innerHTML=itemcount;
+        if(itemcount<1) {
+          document.getElementById("nov_soldout").style.display="block";
+          document.getElementById("itemcount").style.display="none";
+
+        }
+      }
+      function onwrite(val) {
+        let count = val.length
+        document.getElementById("textcount").innerHTML=count + "/40";
+        if(count>40){
+          document.getElementById("message").style.borderColor="red";
+        }
+        else{
+          document.getElementById("message").style.borderColor="gray";
+        }
+
+      }
+
+      function onprevious() {
+        document.getElementById("slider").src="chicago image.jpg";
+
+
+      }
+      function onnext() {
+        // alert()
+        document.getElementById("slider").src="la image.jpg";
+
+      }
+
+    </script>
+    <!-- <script type="text/javascript" src="JavaScript/script.js"></script> -->
+    </body>
+    
+</html>
